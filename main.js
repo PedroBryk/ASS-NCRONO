@@ -1,7 +1,4 @@
-
-
 console.log("Início do sistema de entregas");
-
 
 const entregasIniciais = [
     { id: 1, cliente: "João", endereco: "Rua A, 123", status: "Pendente" },
@@ -9,9 +6,7 @@ const entregasIniciais = [
     { id: 3, cliente: "Pedro", endereco: "Rua C, 789", status: "Pendente" }
 ];
 
-
 localStorage.setItem("entregas", JSON.stringify(entregasIniciais));
-
 
 function buscarEntregas() {
     return new Promise((resolve, reject) => {
@@ -25,7 +20,6 @@ function buscarEntregas() {
         }, 2000); 
     });
 }
-
 
 function atualizarStatus(idEntrega) {
     setTimeout(() => {
@@ -42,7 +36,6 @@ function atualizarStatus(idEntrega) {
         }
     }, 3000);
 }
-
 
 buscarEntregas()
     .then(entregas => {
